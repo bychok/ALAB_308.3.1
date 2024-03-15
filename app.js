@@ -53,3 +53,17 @@ while (true) {
     break;
   }
 }
+console.log("__________________________");
+
+// Part 3: Feeling Loopy
+
+let CSV =
+  "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n" +
+  "57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n" +
+  "98,Bill,Doctor’s Assistant,26";
+let data = CSV.split("\n");
+
+for (let i = 0; i < data.length; i++) {
+  let line = data[i];
+  console.log(line);
+}
