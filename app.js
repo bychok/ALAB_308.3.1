@@ -23,6 +23,8 @@ for (let i = 1; i <= 100; i++) {
 
 // Part 2: Prime Time
 /*
+ A prime number is any whole number greater than 1 that cannot be exactly divided by
+any whole number other than itself and 1.
 Write a script that accomplishes the following:
 Declare an arbitrary number, n.
 Create a loop that searches for the next prime number, starting at n and incrementing from there.
@@ -30,3 +32,24 @@ As soon as you find the prime number, log that number and exit the loop.
 Continuing with the example above, if n is equal to 4,
 your loop should log 5. Similarly, if n is 5, it should log 7, and if n is 9, it should log 11. 
 */
+
+console.log("__________________________");
+
+let number = 5;
+
+while (true) {
+  number += 1;
+  let isPrime = true;
+
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(number);
+    break;
+  }
+}
